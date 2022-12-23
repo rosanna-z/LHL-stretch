@@ -20,20 +20,18 @@
 const loopyLighthouse = function (range, multiples, words) {
   for (let x = range[0]; x < range[1] + 1; x++) {
     let output = "";
-    output += checkMultiples(x, multiples[0], words[0])
-    output += checkMultiples(x, multiples[1], words[1])
+    output += checkMultiples(x, multiples[0], words[0]);
+    output += checkMultiples(x, multiples[1], words[1]);
     console.log(output == "" ? x : output);
-    }
-  
   }
+};
 
-const checkMultiples = function(x, multiple, word) {
-  if (x%multiple === 0) {
+const checkMultiples = function (x, multiple, word) {
+  if (x % multiple === 0) {
     return word;
-  }
-  else {
+  } else {
     return "";
   }
-}
+};
 
 loopyLighthouse([15, 90], [2, 5], ["Batty", "Beacon"]);
